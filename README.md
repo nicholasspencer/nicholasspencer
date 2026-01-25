@@ -1,16 +1,13 @@
-## Hi there 👋
+## Howdy y'all
 
-<!--
-**nicholasspencer/nicholasspencer** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm Nico — Lead Software Engineer at [@Resideo](https://github.com/resideo), based in Austin by way of Dallas.
 
-Here are some ideas to get you started:
+Been building software for over twenty years now. Started with PHP and MySQL back in '05, picked up iOS development early on, and it stuck. Spent time at Match, Shyp, Synack, and American Airlines before landing at Resideo, where I lead mobile engineering. Most of my work these days is in Flutter. 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Currently experimenting with building digital circuses and assembling troupe of clowns themed around fictional media characters. I mean agentic workflows. 
+
+🤖 - [Clawdbot](https://github.com/clawdbot/clawdbot).
+
+---
+
+*Last updated: January 25, 2026*
