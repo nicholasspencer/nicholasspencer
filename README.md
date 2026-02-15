@@ -6,7 +6,7 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 ### What I'm tinkering with
 
-On weekends I've been going deep on multi-agent orchestration — basically wiring up swarms of AI agents to collaborate on software projects. Think mayors, deacons, refineries, and packs of worker agents (polecats) all coordinating through a pipeline I built.
+Weekends have been all about multi-agent orchestration — building on [Gas Town](https://github.com/steveyegge/gastown) and [Beads](https://github.com/steveyegge/beads), a toolkit for coordinating swarms of AI agents on real software projects. Gas Town handles the orchestration, Beads tracks the work.
 
 Some stats from the hobby bench:
 
