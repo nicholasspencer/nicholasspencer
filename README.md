@@ -6,7 +6,7 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 ### What I'm tinkering with
 
-Weekends have been all about multi-agent orchestration — building on [Gas Town](https://github.com/nicholasspencer/gastown) and Beads, a toolkit I've been developing for coordinating swarms of AI agents on real software projects. Gas Town handles the orchestration, Beads tracks the work.
+Weekends have been all about multi-agent orchestration — building on [Gas Town](https://github.com/steveyegge/gastown) and [Beads](https://github.com/steveyegge/beads), a toolkit for coordinating swarms of AI agents on real software projects. Gas Town handles the orchestration, Beads tracks the work.
 
 Some stats from the hobby bench:
 
