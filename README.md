@@ -2,12 +2,23 @@
 
 I'm Nico — Lead Software Engineer at [@Resideo](https://github.com/resideo), based in Austin.
 
-Been building software for over twenty years now. Started with PHP and MySQL back in '05, picked up iOS development early on, and it stuck. Spent time at Match, Shyp, Synack, and American Airlines before landing at Resideo, where I lead mobile engineering. Most of my work these days is in Flutter. 
+Been building software for over twenty years now. Started with PHP and MySQL back in '05, picked up iOS development early on, and it stuck. Spent time at Match, Shyp, Synack, and American Airlines before landing at Resideo, where I lead mobile engineering. Most of my work these days is in Flutter.
 
-Currently experimenting with building digital circuses and assembling troupes of clowns. I mean agentic workflows. 
+### What I'm tinkering with
 
-🤖 - [Clawdbot](https://github.com/clawdbot/clawdbot).
+On weekends I've been going deep on multi-agent orchestration — basically wiring up swarms of AI agents to collaborate on software projects. Think mayors, deacons, refineries, and packs of worker agents (polecats) all coordinating through a pipeline I built.
+
+Some stats from the hobby bench:
+
+- **2,630** work items tracked across a couple of active workstreams
+- **~61%** completion rate (1,597 closed, 731 still in flight)
+- **55** commits landed so far
+- Up to **9 unique agent contributors** on a single project — humans optional 😄
+
+It's powered by [OpenClaw](https://github.com/openclaw/openclaw) under the hood, with a bunch of custom orchestration on top. Still very much a weekend science experiment, but it's getting weirdly productive.
+
+🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
 
 ---
 
-*Last updated: January 25, 2026*
+*Last updated: February 15, 2026*
