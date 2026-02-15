@@ -17,7 +17,7 @@ Some stats from the hobby bench:
 
 It's powered by [OpenClaw](https://github.com/openclaw/openclaw) under the hood, with a bunch of custom orchestration on top. Still very much a weekend science experiment, but it's getting weirdly productive.
 
-🤖 - [Clawdbot](https://github.com/clawdbot/clawdbot)
+🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
 
 ---
 
