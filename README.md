@@ -6,16 +6,17 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 ### What I'm tinkering with
 
-Weekends have been all about multi-agent orchestration — building on [Gas Town](https://github.com/steveyegge/gastown) and [Beads](https://github.com/steveyegge/beads), a toolkit for coordinating swarms of AI agents on real software projects. Gas Town handles the orchestration, Beads tracks the work.
+Weekends lately have been about multi-agent orchestration — wiring up swarms of AI agents to work on real codebases together. Think of it like a tiny software factory where agents pick up tasks, do the work, and hand things off to each other.
 
 Some stats from the hobby bench:
 
-- **2,630** work items tracked across a couple of active workstreams
+- **2 active rigs** (workstreams) running
+- **2,630** work items tracked
 - **~61%** completion rate (1,597 closed, 731 still in flight)
-- **55** commits landed so far
-- Up to **9 unique agent contributors** on a single project — humans optional 😄
+- **55** commits landed across projects
+- Up to **9 unique agent contributors** on a single project — mayors, workers, witnesses, the whole crew 😄
 
-It's powered by [OpenClaw](https://github.com/openclaw/openclaw) under the hood, with a bunch of custom orchestration on top. Still very much a weekend science experiment, but it's getting weirdly productive.
+It's all built on top of [OpenClaw](https://github.com/openclaw/openclaw), with custom orchestration layers for coordinating the swarm. Still very much a weekend science experiment, but it's getting weirdly productive.
 
 🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
 
