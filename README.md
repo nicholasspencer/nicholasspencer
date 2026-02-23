@@ -22,4 +22,4 @@ It's all built on top of [OpenClaw](https://github.com/openclaw/openclaw), with 
 
 ---
 
-*Last updated: February 15, 2026*
+*Last updated: February 22, 2026*
