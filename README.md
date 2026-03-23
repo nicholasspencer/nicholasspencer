@@ -6,20 +6,21 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 ### What I'm tinkering with
 
-Weekends lately revolve around multi-agent orchestration — hooking up swarms of AI agents that collaborate on real codebases. Think of it as a tiny autonomous software shop: agents claim tasks, write code, review each other's work, and keep the pipeline moving without much hand-holding.
+Most of my free time goes into multi-agent orchestration — wiring up swarms of AI agents that collaborate on real codebases. Imagine a little autonomous dev shop: agents pick up tasks, write code, review each other, and keep things moving with minimal babysitting.
 
-Some numbers from the hobby bench:
+Current swarm stats:
 
-- **2 active rigs** running in parallel
-- **2,630** work items tracked across projects
-- **~61%** completion rate (1,597 done, 731 still cooking)
-- **55** commits landed so far
-- Up to **9 unique agent contributors** on a single project — mayors, deacons, workers, witnesses, the whole crew 😄
+- **2 active rigs** running side by side
+- **2,630** work items tracked
+- **1,597** completed (~61% hit rate)
+- **731** still in the queue
+- **55** commits across projects
+- Up to **9 unique agent contributors** on a single repo — mayors, deacons, workers, witnesses, the whole crew 😄
 
-Built on top of [OpenClaw](https://github.com/openclaw/openclaw) with custom orchestration layers. Still weekend-science-experiment territory, but the swarm is getting weirdly productive.
+Running on [OpenClaw](https://github.com/openclaw/openclaw) with custom orchestration on top. Still firmly in weekend-science-experiment territory, but the swarm keeps surprising me.
 
 🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
 
 ---
 
-*Last updated: March 15, 2026*
+*Last updated: March 22, 2026*
