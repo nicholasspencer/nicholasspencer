@@ -17,7 +17,7 @@ Some live numbers from the hobby bench:
 - **310** commits landed across factory-managed repos
 - **5** unique contributors (a mix of human + agent identities)
 
-Built on top of [OpenClaw](https://github.com/openclaw/openclaw) with custom orchestration layers. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
+Built on top of OpenClaw with custom orchestration layers. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
 
 **Local inference on Apple Silicon**
 
@@ -30,7 +30,7 @@ Also building a local inference orchestration server in Swift — runs multiple 
 | Peak local throughput | **~65 tokens/sec** (7B model on MLX) |
 | Backends tested | MLX (7B, 32B), FlashMoE (397B) |
 
-Still early days — the goal is to publish reproducible benchmarks for different model sizes on consumer Apple hardware.
+Still early days — the goal is to publish reproducible benchmarks for different model sizes on consumer Apple hardware. Live metrics dashboard: [claw.nicospencer.com/metrics](https://claw.nicospencer.com/metrics)
 
 🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
 
