@@ -6,20 +6,34 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 ### What I'm tinkering with
 
-Weekends lately revolve around multi-agent orchestration — hooking up swarms of AI agents that collaborate on real codebases. Think of it as a tiny autonomous software shop: agents claim tasks, write code, review each other's work, and keep the pipeline moving without much hand-holding.
+**Multi-agent orchestration (the factory loop)**
 
-Some numbers from the hobby bench:
+Most of my weekend hacking lately is on autonomous agent workflows — a pipeline where AI agents pick up work items (called *beads*), write blueprints, implement code, review each other's PRs, and land changes with minimal human input. A supervisor coordinates the whole thing: assigns priorities, resolves blockers, and keeps the factory moving.
 
-- **2 active rigs** running in parallel
-- **2,630** work items tracked across projects
-- **~61%** completion rate (1,597 done, 731 still cooking)
-- **55** commits landed so far
-- Up to **9 unique agent contributors** on a single project — mayors, deacons, workers, witnesses, the whole crew 😄
+Some live numbers from the hobby bench:
 
-Built on top of [OpenClaw](https://github.com/openclaw/openclaw) with custom orchestration layers. Still weekend-science-experiment territory, but the swarm is getting weirdly productive.
+- **65** beads tracked across projects
+- **~88%** completion rate (57 closed)
+- **310** commits landed across factory-managed repos
+- **5** unique contributors (a mix of human + agent identities)
+
+Built on top of OpenClaw with custom orchestration layers. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
+
+**Local inference on Apple Silicon**
+
+Also building a local inference orchestration server in Swift — runs multiple model backends (MLX, FlashMoE) behind a single OpenAI-compatible API and routes requests to whichever node makes sense. Early telemetry from real requests on an M-series Mac:
+
+| Metric | Value |
+|--------|-------|
+| Avg time-to-first-token | **331 ms** (p50: 117 ms) |
+| Avg throughput | **26.7 tokens/sec** |
+| Peak local throughput | **~65 tokens/sec** (7B model on MLX) |
+| Backends tested | MLX (7B, 32B), FlashMoE (397B) |
+
+Still early days — the goal is to publish reproducible benchmarks for different model sizes on consumer Apple hardware. Live metrics dashboard: [claw.nicospencer.com/metrics](https://claw.nicospencer.com/metrics)
 
 🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
 
 ---
 
-*Last updated: March 15, 2026*
+*Last updated: March 29, 2026*
