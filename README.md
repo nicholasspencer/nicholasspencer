@@ -33,8 +33,6 @@ Live numbers over the last 500 requests:
 
 For coding quality I lean on EvalPlus HumanEval — earlier runs through the same server clocked gemma4-fast (31B, 4-bit) at **89.0%** pass@1 and qwen3-coder-next at **90.9%**.
 
-The goal is reproducible benchmarks for different model sizes on consumer Apple hardware.
-
 ---
 
 *Last updated: June 8, 2026*
