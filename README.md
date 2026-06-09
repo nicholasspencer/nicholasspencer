@@ -8,32 +8,33 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 **Multi-agent orchestration (the factory loop)**
 
-Most of my weekend hacking lately is on autonomous agent workflows — a pipeline where AI agents pick up work items (called *beads*), write blueprints, implement code, review each other's PRs, and land changes with minimal human input. A supervisor coordinates the whole thing: assigns priorities, resolves blockers, and keeps the factory moving.
+Most of my weekend hacking lately is on autonomous agent workflows — a pipeline where AI agents pick up work items (called *beads*), write specs, implement code, review each other's PRs, and land changes with minimal human input. A supervisor keeps the factory moving through a *discover → specify → committee → build → review → merge* loop, assigning priorities and clearing blockers along the way.
 
 Some live numbers from the hobby bench:
 
-- **65** beads tracked across projects
-- **~88%** completion rate (57 closed)
-- **310** commits landed across factory-managed repos
-- **5** unique contributors (a mix of human + agent identities)
+- **1,816** beads tracked across three project trackers
+- **~83%** completion rate (1,512 closed)
+- **2,080** commits landed across factory-managed repos
+- a human plus a rotating cast of agents (one of them, Chad, just got put on ice)
 
-Built on top of OpenClaw with custom orchestration layers. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
+The stack is homegrown now: [factoryskills](https://github.com/nicholasspencer/factoryskills) (the `fs` dev loop) running on the Gas City engine, with [beads](https://github.com/nicholasspencer/beads) (`bd`) handling work tracking. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
 
 **Local inference on Apple Silicon**
 
-Also building a local inference orchestration server in Swift — runs multiple model backends (MLX, FlashMoE) behind a single OpenAI-compatible API and routes requests to whichever node makes sense. Early telemetry from real requests on an M-series Mac:
+Also building [swift-infer](https://github.com/nicholasspencer/swift-infer), a local inference orchestration server in Swift — runs multiple model backends behind a single OpenAI-compatible API and routes each request to whichever node makes sense. Right now it's serving Qwen 3.6 — a 27B dense model and a 35B-A3B MoE — both 8-bit on MLX, all running locally.
+
+Live numbers over the last 500 requests:
 
 | Metric | Value |
 |--------|-------|
-| Avg time-to-first-token | **331 ms** (p50: 117 ms) |
-| Avg throughput | **26.7 tokens/sec** |
-| Peak local throughput | **~65 tokens/sec** (7B model on MLX) |
-| Backends tested | MLX (7B, 32B), FlashMoE (397B) |
+| Avg time-to-first-token | **86 ms** (p50: 56 ms, p95: 109 ms) |
+| Avg throughput | **39.8 tokens/sec** |
+| Peak throughput | **~80 tokens/sec** (the 35B-A3B MoE) |
 
-Still early days — the goal is to publish reproducible benchmarks for different model sizes on consumer Apple hardware. Live metrics dashboard: [claw.nicospencer.com/metrics](https://claw.nicospencer.com/metrics)
+For coding quality I lean on EvalPlus HumanEval — earlier runs through the same server clocked gemma4-fast (31B, 4-bit) at **89.0%** pass@1 and qwen3-coder-next at **90.9%**.
 
-🤖 - [OpenClaw](https://github.com/openclaw/openclaw)
+The goal is reproducible benchmarks for different model sizes on consumer Apple hardware. Live metrics dashboard: [claw.nicospencer.com/metrics](https://claw.nicospencer.com/metrics)
 
 ---
 
-*Last updated: March 29, 2026*
+*Last updated: June 8, 2026*
