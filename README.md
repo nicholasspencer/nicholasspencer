@@ -17,11 +17,11 @@ Some live numbers from the hobby bench:
 - **2,080** commits landed across factory-managed repos
 - a human plus a rotating cast of agents (one of them, Chad, just got put on ice)
 
-The stack is homegrown now: [factoryskills](https://github.com/nicholasspencer/factoryskills) (the `fs` dev loop) running on the Gas City engine, with [beads](https://github.com/nicholasspencer/beads) (`bd`) handling work tracking. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
+The stack is homegrown now: **factoryskills** (the `fs` dev loop) running on the Gas City engine, with **beads** (`bd`) handling work tracking. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
 
 **Local inference on Apple Silicon**
 
-Also building [swift-infer](https://github.com/nicholasspencer/swift-infer), a local inference orchestration server in Swift — runs multiple model backends behind a single OpenAI-compatible API and routes each request to whichever node makes sense. Right now it's serving Qwen 3.6 — a 27B dense model and a 35B-A3B MoE — both 8-bit on MLX, all running locally.
+Also building **swift-infer**, a local inference orchestration server in Swift — runs multiple model backends behind a single OpenAI-compatible API and routes each request to whichever node makes sense. Right now it's serving Qwen 3.6 — a 27B dense model and a 35B-A3B MoE — both 8-bit on MLX, all running locally.
 
 Live numbers over the last 500 requests:
 
@@ -33,7 +33,7 @@ Live numbers over the last 500 requests:
 
 For coding quality I lean on EvalPlus HumanEval — earlier runs through the same server clocked gemma4-fast (31B, 4-bit) at **89.0%** pass@1 and qwen3-coder-next at **90.9%**.
 
-The goal is reproducible benchmarks for different model sizes on consumer Apple hardware. Live metrics dashboard: [claw.nicospencer.com/metrics](https://claw.nicospencer.com/metrics)
+The goal is reproducible benchmarks for different model sizes on consumer Apple hardware.
 
 ---
 
