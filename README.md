@@ -17,7 +17,7 @@ Some live numbers from the hobby bench:
 - **2,080** commits landed across factory-managed repos
 - a human plus a rotating cast of agents (one of them, Chad, just got put on ice)
 
-Just spent the past few weeks of nights and weekends ripping out a custom Go implementation and moving the whole thing onto **factoryskills** (the `fs` dev loop) running on the Gas City engine, with **beads** (`bd`) handling work tracking. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
+Just spent the past few weeks of nights and weekends refactoring **factoryskills** — my agent dev loop, which started life as a custom Go beads controller — into a **Gas City** pack, with **beads** (`bd`) handling work tracking. Still very much weekend-science-experiment energy, but the agents are getting surprisingly productive.
 
 **Local inference on Apple Silicon**
 
