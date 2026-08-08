@@ -8,11 +8,9 @@ Been building software for over twenty years now. Started with PHP and MySQL bac
 
 **[memento.engineering](https://github.com/memento-engineering)**
 
-Nearly all of my nights-and-weekends work now lives in one place: a small org built around a single bet.
+Nearly all of my nights-and-weekends work now lives in one place: a small org where the whole toolchain is Dart, top to bottom. Apps are built in Flutter. Leonard drives and debugs the apps. Leonard files bugs as beads into the grid. The grid builds everything.
 
-> Apps are built in Flutter. Leonard drives and debugs the apps. Leonard files bugs as beads into the grid. **The grid builds everything.**
-
-It's a long bet on Dart as a full-stack agentic platform — one substrate engine, a debugging harness that drives running programs, and a work-graph orchestrator that spawns coding agents against the ready frontier.
+That's one substrate engine, a debugging harness that drives running programs, and a work-graph orchestrator that spawns coding agents against the ready frontier — all in the same language, so a fix in the substrate shows up in the harness and the orchestrator without a translation layer in between.
 
 | Repo | What it is |
 |------|------------|
@@ -33,7 +31,7 @@ This replaces the Go-then-Gas-City "factory loop" I was running earlier this yea
 
 **[Butane](https://github.com/nicholasspencer/butane_flutter) 🔥**
 
-A federated Flutter Bluetooth Low Energy plugin, and the app-shaped half of the bet above. Central *and* peripheral roles on iOS, macOS, Linux (BlueZ over D-Bus), and Android — with a Windows central implementation landing now. The first seven packages went out at **0.1.0** on pub.dev this summer.
+A federated Flutter Bluetooth Low Energy plugin — and the app end of everything above. Central *and* peripheral roles on iOS, macOS, Linux (BlueZ over D-Bus), and Android — with a Windows central implementation landing now. The first seven packages went out at **0.1.0** on pub.dev this summer.
 
 The part I actually enjoy: it's verified by cross-device "burns." A grid station leases real hardware, launches a follower app on one machine and a central on another, and Leonard drives both over the VM service through a 15-step scenario — Android ↔ macOS, both directions, screen-recorded. Testing a radio stack against another *real* radio stack, driven by an agent, turns out to catch things a mock never will.
 
