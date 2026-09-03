@@ -19,16 +19,18 @@ That's one substrate engine, a debugging harness that drives running programs, a
 | [the_grid](https://github.com/memento-engineering/the_grid) | The orchestrator. A resident station observes a [beads](https://github.com/steveyegge/beads) work graph and reconciles it as a tree — **mount = spawn, unmount = kill**. Each ready bead gets a git worktree, a coding agent, a committee of critics, and a landed PR. |
 | [power_station](https://github.com/memento-engineering/power_station) | First-party asset packs for the_grid — the code, dart, federation, and zero-conf domains. Opinions live here, never in the engine. |
 | [space_station](https://github.com/memento-engineering/space_station) | memento's own grid instance — the assembled station runner. Downstream stations extend it, never fork it. |
-| [decisions](https://github.com/memento-engineering/decisions) | The newest one. A register is a **citation graph with force**, not a document tree: every decision binds the moment it's written, and the consolidated `ADR-000N` document is a generated view over the graph rather than a destination. A [MADR](https://github.com/adr/madr) 4.0 profile that degrades to grep. |
+| [decisions](https://github.com/memento-engineering/decisions) | A register is a **citation graph with force**, not a document tree: every decision binds the moment it's written, and the consolidated `ADR-000N` document is a generated view over the graph rather than a destination. A [MADR](https://github.com/adr/madr) 4.0 profile that degrades to grep. |
 
 Some numbers from the bench:
 
-- **2,982** beads tracked across seven work graphs
-- **~88%** completion rate (2,618 closed)
-- **~3,250** commits landed, most of them written by agents and gated by other agents
-- still a young org — `genesis` and `the_grid` started June 11, the stations July 1, and `decisions` didn't exist until the end of August
+- **2,982** beads tracked across seven work graphs, **~88%** closed
+- **~3,250** commits landed, most of them written by agents and gated by other agents — **~700 of those in the last month alone**
+- **37 packages** on pub.dev — eight `genesis_*`, nine from the_grid, thirteen `leonard_*`, seven Butane
+- still a young org — `genesis` and `the_grid` started June 11, the stations July 1
 
-August's project was the last one on that list. Every repo in the roster had accumulated its own ADR pile, so the fix was to stop treating decisions as documents: write them as slug-identified entries with typed supersession edges, let the tooling render the tidy numbered view, and give the org its own register for the calls that govern the whole roster rather than any single repo. Then the agents convert their own back catalogs and cite the register from here on.
+Most of August went into the **trajectory log**. Every session the grid runs now lands in an append-only record — its own database, one table, a single fenced appender — migrated in stages behind a dual-write shadow window so the old read path and the new one could be diffed against each other before the cut. What it buys is `traj committee-report`: fold the verdicts, gates, respec outcomes and token spend across sessions and you get per-lane precision, override rate, respec convergence, and cost. The grid can finally answer whether its own committee of critics is worth what it costs to run — which is the question I've wanted to ask since the first one shipped.
+
+Leonard's decision oracle became pluggable in the same stretch. `leonard_acp` drives any [ACP](https://agentclientprotocol.com)-compatible coding agent as the per-turn brain behind the existing model-provider seam, so a live app can be steered by a hosted model, a local one, or whatever coding agent you already have open. Meanwhile the stations grew real seats — per-seat GitHub App clients, named agent environments picked in code — and the last week of the month went to `decisions`, because every repo had grown its own ADR pile and I'd rather have a graph than a filing cabinet.
 
 This whole setup replaces the Go-then-Gas-City "factory loop" I was running earlier this year. Same idea, rebuilt Dart-native and reactive: the work graph is *observed* rather than polled, and the running system of agents is a reconciled tree rather than a supervisor loop.
 
